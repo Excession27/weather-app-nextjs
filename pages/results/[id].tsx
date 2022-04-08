@@ -5,7 +5,6 @@ import WeatherData from '../WeatherData'
 
 
 const Index: React.FC<WeatherData> = (props: WeatherData) => {
-    console.log(props);
 
     const city = props.objekt.city;
 

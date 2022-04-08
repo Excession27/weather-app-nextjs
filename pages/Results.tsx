@@ -10,13 +10,13 @@ import Link from 'next/link'
 const Results: NextPage = () => {
 
     const { data, collectData } = useContext(DataContext);
-    console.log(data);
+    
     return (
         <div className={styles.results}>
 
 
             {data.map((item: any, index) => {
-                console.log(item);
+                
                 return (
                     <Link href={`/results/${item.country}?geo=${item.lat},${item.lon}&city=${item.name}`} key={index} passHref>
                         <a>
