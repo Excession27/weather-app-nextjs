@@ -1,0 +1,26 @@
+.li_item {
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    margin: 5px;
+}
+
+.result {
+    display: flex;
+}
+
+.temps {
+    display: flex;
+    padding: 5px;
+    
+}
+
+.temps .min {
+    color:aquamarine;
+    margin: 5px;
+}
+
+.temps .max {
+    color:indianred;
+    margin: 5px;
+}

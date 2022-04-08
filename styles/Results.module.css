@@ -1,0 +1,23 @@
+.results {
+    
+    padding: 5px;
+    width: 100%;
+}
+
+.results li {
+    display: flex;
+    flex-flow: column wrap;
+    border: 1px solid silver;
+}
+
+.city_info {
+
+}
+
+.current_weather {
+
+}
+
+.geo_coords {
+
+}
