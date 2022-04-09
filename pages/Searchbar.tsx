@@ -13,7 +13,7 @@ const Searchbar: NextPage = () => {
   const {data, collectData} = useContext(DataContext);
 
   const getData = async () => {
-    const res = await fetch(`http://localhost:3000/api/cities?searchCity=${searchCity}`)
+    const res = await fetch(`${window.location.href}/api/cities?searchCity=${searchCity}`)
     const json = await res.json()
     return json
   }

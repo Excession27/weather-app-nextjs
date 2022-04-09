@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={""}>
+      <main className={styles.main}>
 
         <Searchbar  />
         <Results />

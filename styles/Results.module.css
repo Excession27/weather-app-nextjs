@@ -1,6 +1,6 @@
 .results {
     
-    padding: 5px;
+    padding: 10px 0;
     width: 100%;
 }
 
@@ -8,6 +8,8 @@
     display: flex;
     flex-flow: column wrap;
     border: 1px solid silver;
+    margin-bottom: 10px;
+    padding: 10px 70px;
 }
 
 .city_info {

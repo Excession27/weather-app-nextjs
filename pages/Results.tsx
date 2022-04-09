@@ -19,7 +19,7 @@ const Results: NextPage = () => {
                 
                 return (
                     <Link href={`/results/${item.country}?geo=${item.lat},${item.lon}&city=${item.name}`} key={index} passHref>
-                        <a>
+                        <a href={`/results/${item.country}?geo=${item.lat},${item.lon}&city=${item.name}`}>
                             <li>
                                 <div className={styles.city_info}>
                                     <h3>{item.name}, {item.country}</h3>

@@ -8,7 +8,7 @@ const Index: React.FC<WeatherData> = (props: WeatherData) => {
 
     const city = props.objekt.city;
 
-    const fiveDayWeather = props.objekt.data.daily.slice(3);
+    const fiveDayWeather = props.objekt.data.daily.slice(0, 5);
     
 
     return (
@@ -39,12 +39,9 @@ export const getServerSideProps: any = async ({ params, query }: any) => {
     
     const latitude = query.geo.split(",")[0]
     const longitute = query.geo.split(",")[1]
-    const res = await fetch(`http://localhost:3000/api/city-weather?lat=${latitude}&lon=${longitute}`);
+    const res = await fetch(`${process.env.currentURL}/api/city-weather?lat=${latitude}&lon=${longitute}`);
     const json = await res.json();
-    
 
-    // const res = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitute}&exclude=minutely,hourly,alerts&units=metric&appid=${APIkey}`);
-    // const json = await res.json();
 
     const objekt = { data: json, route: params.id, geo: query.geo, city: query.city };
     return { props: { objekt } }

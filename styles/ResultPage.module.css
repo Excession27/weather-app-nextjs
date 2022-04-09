@@ -24,3 +24,7 @@
     color:indianred;
     margin: 5px;
 }
+
+.result li {
+    border: 1px solid grey;
+}

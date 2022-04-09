@@ -7,7 +7,7 @@ type Props = {
 
 type dataContextType = {
     data: Array<string>;
-    collectData: (d:Array<string>) => void;
+    collectData: (d: Array<string>) => void;
 }
 
 export const DataContext = createContext<dataContextType>({
@@ -18,16 +18,14 @@ export const DataContext = createContext<dataContextType>({
 
 export default function ContextProvider({ children }: Props) {
 
-
     let [data, setData] = useState<Array<string>>([]);
 
     const collectData = (w: Array<string>) => {
-        
+
         setData(() =>
             w
         )
     }
-
 
     return (
 
